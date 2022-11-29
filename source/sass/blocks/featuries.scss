@@ -1,0 +1,16 @@
+.featuries {
+  background-color: $color-solitude;
+}
+
+.featuries ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.featuries li {
+  background-color: $color-alice-blue;
+}

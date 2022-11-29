@@ -1,0 +1,11 @@
+.contacts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.contacts__description ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

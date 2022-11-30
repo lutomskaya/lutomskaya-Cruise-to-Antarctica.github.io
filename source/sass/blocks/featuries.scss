@@ -1,5 +1,8 @@
 .featuries {
   background-color: $color-solitude;
+  background-image: image-set("../img/background/background-featuries@2x.webp" 2x, "../img/background/background-featuries.webp" 1x);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .featuries ul {

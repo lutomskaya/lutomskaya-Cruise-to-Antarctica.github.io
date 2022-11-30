@@ -1,32 +1,35 @@
 @font-face {
-  font-style: normal;
-  font-weight: 400;
-  font-family: "roboto-condensed";
-
-  font-display: swap;
-  src:
-    url("../fonts/roboto-condensed.woff2") format("woff2"),
-    url("../fonts/roboto-condensed.woff") format("woff");
-}
-
-@font-face {
-  font-style: normal;
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"),
+    url("../fonts/Montserrat-Bold.woff") format("woff");
   font-weight: 700;
-  font-family: "roboto-condensed";
-
+  font-style: normal;
   font-display: swap;
-  src:
-    url("../fonts/roboto-condensed-bold.woff2") format("woff2"),
-    url("../fonts/roboto-condensed-bold.woff") format("woff");
 }
 
 @font-face {
-  font-style: normal;
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"),
+    url("../fonts/Montserrat-Regular.woff") format("woff");
   font-weight: 400;
-  font-family: "pt-mono";
-
+  font-style: normal;
   font-display: swap;
-  src:
-    url("../fonts/PTMono-Regular.woff2") format("woff2"),
-    url("../fonts/PTMono-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"),
+    url("../fonts/Montserrat-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Medium.woff2") format("woff2"),
+    url("../fonts/Montserrat-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }

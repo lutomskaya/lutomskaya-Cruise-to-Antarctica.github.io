@@ -1,5 +1,17 @@
 .booking {
   background-color: $color-solitude;
+  background-image: image-set("../img/background/background-booking-desktop@2x.webp" 2x, "../img/background/background-booking-desktop.webp" 1x);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include vp-1023 {
+    background-image: image-set("../img/background/background-booking-tablet@2x.webp" 2x, "../img/background/background-booking-tablet.webp" 1x);
+    box-shadow: none;
+  }
+
+  @include vp-767 {
+    background-image: image-set("../img/background/background-booking-mobile@2x.webp" 2x, "../img/background/background-booking-mobile.webp" 1x);
+  }
 }
 
 .booking__wrapper {

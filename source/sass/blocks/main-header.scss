@@ -1,5 +1,18 @@
 .main-header {
-  background-color: $color-neon-blue;
+  background-color: $color-deep-sky-blue;
+  background-image: image-set("../img/background/background-header-desktop@2x.webp" 2x, "../img/background/background-header-desktop.webp" 1x);
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+  @include vp-1023 {
+    background-image: image-set("../img/background/background-header-tablet@2x.webp" 2x, "../img/background/background-header-tablet.webp" 1x);
+    box-shadow: none;
+  }
+
+  @include vp-767 {
+    background-image: image-set("../img/background/background-header-mobile@2x.webp" 2x, "../img/background/background-header-mobile.webp" 1x);
+  }
 }
 
 .main-header__nav {
@@ -31,6 +44,22 @@
   list-style: none;
 }
 
+.main-header__list a {
+  font-weight: 500;
+  line-height: 20px;
+  color: $color-default-white;
+
+  @include vp-1024 {
+    font-size: 14px;
+    line-height: 17px; 
+  } 
+
+  @include vp-767 {
+    font-size: 18px;
+    line-height: 22px; 
+  }
+}
+
 .main-header__nav--opened .navigation {
   @include vp-767 {
     display: grid;
@@ -60,4 +89,35 @@
 
 .main-header__intro {
   color: $color-default-white;
+}
+
+.main-header__intro h1 {
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 66px;
+
+  @include vp-1024 {
+    font-size: 50px;
+    line-height: 61 px; 
+  } 
+
+  @include vp-767 { 
+    font-size: 36px;
+    line-height: 125%; 
+  }
+}
+
+.main-header__intro p {
+  font-size: 20px;
+  line-height: 24px;
+
+  @include vp-1024 {
+    font-size: 18px;
+    line-height: 22px; 
+  } 
+
+  @include vp-767 { 
+    font-size: 16px;
+    line-height: 140%; 
+  }
 }

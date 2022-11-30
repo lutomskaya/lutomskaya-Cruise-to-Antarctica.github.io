@@ -26,16 +26,16 @@
           <nav class="main-header__navigation">
             <ul class="main-header__list">
               <li>
-                <a href="#">Преимущества</a>
+                <a href="#featuries" data-link>Преимущества</a>
               </li>
               <li>
-                <a href="#">Направления</a>
+                <a href="#intro" data-link>Направления</a>
               </li>
               <li>
-                <a href="#">Ближайшие круизы</a>
+                <a href="#catalog" data-link>Ближайшие круизы</a>
               </li>
               <li>
-                <a href="#">Контакты</a>
+                <a href="#contacts" data-link>Контакты</a>
               </li>
             </ul>
             <button class="main-header__toogle" type="button" data-button>
@@ -46,7 +46,7 @@
             </button>
           </nav>
         </div>  
-        <div class="main-header__intro container">
+        <div class="main-header__intro container" id="intro">
           <h1>Круизы в&nbsp;Антарктику</h1>
           <p>Волшебный мир айсбергов и&nbsp;пингвинов</p>
         </div>
@@ -60,32 +60,32 @@
           </div>
           <div class="about__image">
             <picture>
-              <source srcset="img/penguin.webp 1x, img/penguin@2x.webp 2x" type="image/webp">
-              <img src="img/penguin.jpg" srcset="img/penguin@2x.jpg 2x" alt="Производство" width="1494" height="818">
+              <source srcset="./img/penguin.webp 1x, ./img/penguin@2x.webp 2x" type="image/webp">
+              <img src="./img/penguin.jpg" srcset="./img/penguin@2x.jpg 2x" alt="Производство" width="1494" height="818">
             </picture>
           </div>
         </section>
-        <section class="featuries">
+        <section class="featuries" id="featuries">
           <div class="featuries__wrapper container">
             <h2>Преимущества</h2>
             <ul>
               <li class="featuries__item featuries__item--lainer">
                 <svg width="27" height="32" aria-label="Лайнер.">
-                  <use xlink:href="/img/sprite_auto.svg#lainer"></use>
+                  <use xlink:href="./img/sprite_auto.svg#lainer"></use>
                 </svg>
                 <h3>Небольшой круизный&nbsp;лайнер</h3>
                 <p>Круизный лайнер, рассчитанный всего лишь на 300 гостей, поможет избежать шума&nbsp;и очередей и&nbsp;даст возможность насладиться видами и&nbsp;природой.</p>
               </li>
               <li class="featuries__item featuries__item--all-inclusive">
                 <svg width="38" height="32" aria-label="Все всключено.">
-                  <use xlink:href="/img/sprite_auto.svg#all-inclusive"></use>
+                  <use xlink:href="./img/sprite_auto.svg#all-inclusive"></use>
                 </svg>
                 <h3>Система все&nbsp;включено</h3>
                 <p>Все наши круизы работают по системе “Все Включено”. Великолепные блюда и&nbsp;безлимитный бар доступны для&nbsp;вас 24&nbsp;часа.</p>
               </li>
               <li class="featuries__item featuries__item--excursion">
                 <svg width="44" height="32" aria-label="Экскурсии.">
-                  <use xlink:href="/img/sprite_auto.svg#excursion"></use>
+                  <use xlink:href="./img/sprite_auto.svg#excursion"></use>
                 </svg>
                 <h3>Экскурсионные туры на Zodiac</h3>
                 <p>Экскурсионные туры&nbsp;к берегам Антарктиды совершаются на оборудованных лодках&nbsp;типа Zodiack&nbsp;c опытными экскурсоводами.</p>
@@ -93,15 +93,15 @@
             </ul>
           </div>
         </section>
-        <section class="catalog">
+        <section class="catalog" id="catalog">
           <div class="catalog__wrapper container">
             <h2>Ближайшие круизы</h2>
             <ul>
               <li class="catalog__item product">
                 <div class="product__inner">
                   <picture>
-                    <source srcset="img/astoria.webp 1x, img/astoria@2x.webp 2x" type="image/webp">
-                    <img src="img/astoria.jpg" srcset="img/astoria@2x.jpg 2x" alt="Производство" width="1494" height="818" loading="lazy">
+                    <source srcset="./img/astoria.webp 1x, ./img/astoria@2x.webp 2x" type="image/webp">
+                    <img src="./img/astoria.jpg" srcset="./img/astoria@2x.jpg 2x" alt="Производство" width="1494" height="818" loading="lazy">
                   </picture>
                   <h3>Круиз “Астория”</h3>
                 </div>
@@ -123,8 +123,8 @@
               <li class="catalog__item product">
                 <div class="product__inner">
                   <picture>
-                    <source srcset="img/avrora.webp 1x, img/avrora@2x.webp 2x" type="image/webp">
-                    <img src="img/avrora.jpg" srcset="img/avrora@2x.jpg 2x" alt="Производство" width="1494" height="818" loading="lazy">
+                    <source srcset="./img/avrora.webp 1x, ./img/avrora@2x.webp 2x" type="image/webp">
+                    <img src="./img/avrora.jpg" srcset="./img/avrora@2x.jpg 2x" alt="Производство" width="1494" height="818" loading="lazy">
                   </picture>
                   <h3>Круиз “Элайн”</h3>
                 </div>
@@ -146,8 +146,8 @@
               <li class="catalog__item product">
                 <div class="product__inner">
                   <picture>
-                    <source srcset="img/atlantis.webp 1x, img/atlantis@2x.webp 2x" type="image/webp">
-                    <img src="img/atlantis.jpg" srcset="img/atlantis@2x.jpg 2x" alt="Производство" width="1494" height="818" loading="lazy">
+                    <source srcset="./img/atlantis.webp 1x, ./img/atlantis@2x.webp 2x" type="image/webp">
+                    <img src="./img/atlantis.jpg" srcset="./img/atlantis@2x.jpg 2x" alt="Производство" width="1494" height="818" loading="lazy">
                   </picture>
                   <h3>Круиз “Атлантис”</h3>
                 </div>
@@ -169,8 +169,8 @@
               <li class="catalog__item product">
                 <div class="product__inner">
                   <picture>
-                    <source srcset="img/odisey.webp 1x, img/odisey@2x.webp 2x" type="image/webp">
-                    <img src="img/odisey.jpg" srcset="img/odisey@2x.jpg 2x" alt="Производство" width="1494" height="818" loading="lazy">
+                    <source srcset="./img/odisey.webp 1x, ./img/odisey@2x.webp 2x" type="image/webp">
+                    <img src="./img/odisey.jpg" srcset="./img/odisey@2x.jpg 2x" alt="Производство" width="1494" height="818" loading="lazy">
                   </picture>
                   <h3>Круиз “Одиссей”</h3>
                 </div>
@@ -192,8 +192,8 @@
               <li class="catalog__item product">
                 <div class="product__inner">
                   <picture>
-                    <source srcset="img/olimpia.webp 1x, img/olimpia@2x.webp 2x" type="image/webp">
-                    <img src="img/olimpia.jpg" srcset="img/olimpia@2x.jpg 2x" alt="Производство" width="1494" height="818" loading="lazy">
+                    <source srcset="./img/olimpia.webp 1x, ./img/olimpia@2x.webp 2x" type="image/webp">
+                    <img src="./img/olimpia.jpg" srcset="./img/olimpia@2x.jpg 2x" alt="Производство" width="1494" height="818" loading="lazy">
                   </picture>
                   <h3>Круиз “Олимпия”</h3>
                 </div>
@@ -215,8 +215,8 @@
               <li class="catalog__item product">
                 <div class="product__inner">
                   <picture>
-                    <source srcset="img/avrora.webp 1x, img/avrora@2x.webp 2x" type="image/webp">
-                    <img src="img/avrora.jpg" srcset="img/avrora@2x.jpg 2x" alt="Производство" width="1494" height="818" loading="lazy">
+                    <source srcset="./img/avrora.webp 1x, ./img/avrora@2x.webp 2x" type="image/webp">
+                    <img src="./img/avrora.jpg" srcset="./img/avrora@2x.jpg 2x" alt="Производство" width="1494" height="818" loading="lazy">
                   </picture>
                   <h3>Круиз “Аврора”</h3>
                 </div>
@@ -238,8 +238,8 @@
               <li class="catalog__item product">
                 <div class="product__inner">
                   <picture>
-                    <source srcset="img/leonor.webp 1x, img/leonor@2x.webp 2x" type="image/webp">
-                    <img src="img/leonor.jpg" srcset="img/leonor@2x.jpg 2x" alt="Производство" width="1494" height="818" loading="lazy">
+                    <source srcset="./img/leonor.webp 1x, ./img/leonor@2x.webp 2x" type="image/webp">
+                    <img src="./img/leonor.jpg" srcset="./img/leonor@2x.jpg 2x" alt="Производство" width="1494" height="818" loading="lazy">
                   </picture>
                   <h3>Круиз “Леонор”</h3>
                 </div>
@@ -261,8 +261,8 @@
               <li class="catalog__item product">
                 <div class="product__inner">
                   <picture>
-                    <source srcset="img/minion.webp 1x, img/minion@2x.webp 2x" type="image/webp">
-                    <img src="img/minion.jpg" srcset="img/minion@2x.jpg 2x" alt="Производство" width="1494" height="818" loading="lazy">
+                    <source srcset="./img/minion.webp 1x, ./img/minion@2x.webp 2x" type="image/webp">
+                    <img src="./img/minion.jpg" srcset="./img/minion@2x.jpg 2x" alt="Производство" width="1494" height="818" loading="lazy">
                   </picture>
                   <h3>Круиз “Минион - 1”</h3>
                 </div>
@@ -291,7 +291,7 @@
               <p>Забронируйте тур за&nbsp;3&#xfeff;-&#xfeff;6&nbsp;месяцев до&nbsp;даты&nbsp;выезда и&nbsp;сэкономьте до&nbsp;50%</p>
             </div>
             <div class="booking__form">
-              <h3>Оставьте заявку и мы свяжемся с вами в ближайшее время</h3>
+              <h3>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</h3>
               <form class="form" action="https://echo.htmlacademy.ru/" method="post">
                 <label class="visually-hidden" for="name">Имя</label>
                 <input type="text" id="name" placeholder="Имя" required>
@@ -299,39 +299,36 @@
                 <input type="tel" id="phone" placeholder="Телефон" required>
                 <label class="visually-hidden" for="email">Email</label>
                 <input type="email" id="email" placeholder="Email" required>
-                <label>
+                <label class="form__label">
                   <input type="checkbox" required checked>
                   <span class="form__mark"></span>
-                  <span class="form__text">Я согласен на обработку моих персональных данных</span>
+                  <span class="form__text">Я согласен на обработку моих&nbsp;персональных данных</span>
                 </label>
                 <button class="form__button button" type="submit">Оставить заявку</button>
               </form>
             </div>
           </div>
         </section>
-        <section class="contacts container">
+        <section class="contacts container" id="contacts">
           <h2 class="visually-hidden">Контакты.</h2>
-          <div class="contacts__map">
-            <picture>
-              <source srcset="img/map.webp" type="image/webp">
-              <img src="img/map.jpg" alt="Производство" width="1494" height="818">
-            </picture>
+          <div class="contacts__picture">
+            <iframe class="contacts-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002753!2d30.320858715595918!3d59.938719169054764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1669829735338!5m2!1sru!2sru" width="320" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <div class="contacts__description">
-            <p>У вас ещё остались вопросы или сомнения? Приезжайте к нам в офис и мы вам все расскажем.</p>
+            <p>У&nbsp;вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы вам все расскажем.</p>
             <ul>
               <li>
                 <a href="#">
-                  <svg width="55" height="55" aria-label="Адрес.">
-                    <use xlink:href="/img/sprite_auto.svg#mark"></use>
+                  <svg width="18" height="22" aria-label="Адрес.">
+                    <use xlink:href="./img/sprite_auto.svg#mark"></use>
                   </svg>
-                  г. Санкт Петербург,<br> ул. Большая Конюшенная, 19/8
+                  г. Санкт Петербург, ул.&nbsp;Большая&nbsp;Конюшенная,&nbsp;19/8
                 </a>
               </li>
               <li>
                 <a href="tel:88002000000">
-                  <svg width="55" height="55" aria-label="Телефон.">
-                    <use xlink:href="/img/sprite_auto.svg#phone"></use>
+                  <svg width="18" height="18" aria-label="Телефон.">
+                    <use xlink:href="./img/sprite_auto.svg#phone"></use>
                   </svg>
                   8-800-200-00-00
                 </a>
@@ -342,14 +339,14 @@
       </main>
       <footer class="main-footer">
         <div class="main-footer__wrapper container">
-          <div class="main-footer__logo logo">
-            <a class="logo__link logo__link--footer">
-              <svg width="55" height="55" aria-label="Логотип.">
-                <use xlink:href="/img/sprite_auto.svg#logo"></use>
+          <div class="main-footer__logo">
+            <a>
+              <svg width="70" height="38" aria-label="Логотип.">
+                <use xlink:href="./img/sprite_auto.svg#logo"></use>
               </svg>
             </a>
           </div>
-          <div class="main-footer__navigation navigation">
+          <div class="main-footer__navigation">
             <ul>
               <li>
                 <a href="#">Преимущества</a>
@@ -370,21 +367,21 @@
               <li class="main-footer__socials-item">
                 <a href="#" aria-label="Однокласники.">
                   <svg width="20" height="20">
-                    <use xlink:href="/img/sprite_auto.svg#OK"></use>
+                    <use xlink:href="./img/sprite_auto.svg#OK"></use>
                   </svg>
                 </a>
               </li>
               <li class="main-footer__socials-item">
                 <a href="#" aria-label="Дзен.">
                   <svg width="20" height="20">
-                    <use xlink:href="/img/sprite_auto.svg#dzen"></use>
+                    <use xlink:href="./img/sprite_auto.svg#dzen"></use>
                   </svg>
                 </a>
               </li>
               <li class="main-footer__socials-item">
                 <a href="#" aria-label="Реддит.">
                   <svg width="20" height="20">
-                    <use xlink:href="/img/sprite_auto.svg#reddit"></use>
+                    <use xlink:href="./img/sprite_auto.svg#reddit"></use>
                   </svg>
                 </a>
               </li>

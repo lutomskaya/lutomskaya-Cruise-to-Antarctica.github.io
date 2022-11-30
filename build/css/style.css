@@ -750,8 +750,8 @@ button,
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 2px;
-  background-color: #ffffff;
+  height: 4px;
+  background-color: #026593;
 }
 
 .main-header__list a:focus-visible {
@@ -1021,15 +1021,15 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding-top: 50px;
+  padding-top: 48px;
   padding-left: 110px;
   padding-right: 110px;
-  padding-bottom: 50px;
+  padding-bottom: 48px;
 }
 
 .booking__description {
   width: 50%;
-  padding-top: 160px;
+  padding-top: 165px;
 }
 
 .booking__description h2 {
@@ -1128,8 +1128,11 @@ input:disabled {
   pointer-events: none;
 }
 
-label {
+.form__label {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .form input:hover + .form__mark,
@@ -1180,7 +1183,7 @@ label {
 }
 
 .form__button {
-  margin-top: 24px;
+  margin-top: 35px;
 }
 
 .contacts {
@@ -1188,13 +1191,68 @@ label {
   display: grid;
   -ms-grid-columns: (1fr)[2];
   grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
+  gap: 100px;
+  padding-top: 120px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 120px;
+}
+
+.contacts__picture {
+  width: 48%;
+  min-width: 560px;
+  min-height: 306px;
+  background-image: -webkit-image-set(url("../img/map-desktop@2x.webp") 2x, url("../img/map-desktop.webp") 1x);
+  background-image: image-set("../img/map-desktop@2x.webp" 2x, "../img/map-desktop.webp" 1x);
+  background-repeat: no-repeat;
+}
+
+.contacts-map {
+  width: 100%;
+  height: 100%;
+}
+
+.contacts__description {
+  padding-top: 75px;
 }
 
 .contacts__description ul {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.contacts__description li {
+  margin-bottom: 21px;
+}
+
+.contacts__description p {
+  margin: 0;
+  margin-bottom: 32px;
+  padding: 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.contacts__description a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  line-height: 150%;
+}
+
+.contacts__description a:hover {
+  color: #026593;
+}
+
+.contacts__description a:focus-visible {
+  outline: 4px solid #026593;
+}
+
+.contacts__description a:active {
+  opacity: 0.5;
 }
 
 .main-footer {
@@ -1206,6 +1264,57 @@ label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 45px;
+}
+
+.main-footer__logo svg {
+  fill: #ffffff;
+}
+
+.main-footer__navigation ul {
+  margin: 0;
+  margin-top: 8px;
+  margin-left: 30px;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.main-footer__navigation a {
+  position: relative;
+  padding: 10px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+.main-footer__navigation a:hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #026593;
+}
+
+.main-footer__navigation a:focus-visible {
+  outline: 4px solid #026593;
+}
+
+.main-footer__navigation a:active {
+  opacity: 0.5;
 }
 
 .main-footer__socials {
@@ -1216,9 +1325,19 @@ label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 26px;
   margin: 0;
+  margin-top: 10px;
   padding: 0;
   list-style: none;
+}
+
+.main-footer__socials-item a:hover,
+.main-footer__socials-item a:focus-visible {
+  border: none;
+  outline: 4px solid #026593;
 }
 
 /* @mixin hover-focus {
@@ -1460,6 +1579,60 @@ label {
     align-self: center;
     width: 74%;
   }
+
+  .contacts {
+    padding-top: 95px;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-bottom: 100px;
+    gap: 30px;
+  }
+
+  .contacts__picture {
+    min-width: 324px;
+    min-height: 335px;
+    background-image: -webkit-image-set(url("../img/map-tablet@2x.webp") 2x, url("../img/map-tablet.webp") 1x);
+    background-image: image-set("../img/map-tablet@2x.webp" 2x, "../img/map-tablet.webp" 1x);
+  }
+
+  .contacts__description {
+    padding-top: 68px;
+  }
+
+  .contacts__description p {
+    margin-bottom: 27px;
+  }
+
+  .contacts__description a {
+    gap: 12px;
+  }
+
+  .main-footer__wrapper {
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-top: 50px;
+  }
+
+  .main-footer__logo svg {
+    width: 38px;
+    height: 20px;
+  }
+
+  .main-footer__navigation ul {
+    margin-top: 0;
+    margin-left: 15px;
+    gap: 3px;
+  }
+
+  .main-footer__navigation a {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .main-footer__socials ul {
+    margin-top: 3px;
+    gap: 15px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1665,22 +1838,27 @@ label {
     padding-top: 60px;
     padding-left: 15px;
     padding-right: 15px;
+    padding-bottom: 65px;
   }
 
   .booking__description {
     width: 100%;
     padding-top: 0;
-    padding-bottom: 50px;
+    padding-bottom: 33px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .booking__description h2 {
-    margin-bottom: 10px;
+    margin-bottom: 13px;
     font-size: 24px;
     line-height: 130%;
   }
 
   .booking__description p {
     padding: 0;
+    font-size: 16px;
+    line-height: 140%;
     text-align: center;
   }
 
@@ -1689,5 +1867,83 @@ label {
     -ms-grid-row-align: center;
     align-self: center;
     width: 100%;
+    padding-top: 35px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 40px;
+  }
+
+  .booking__form h3 {
+    text-align: center;
+    line-height: 140%;
+  }
+
+  .form__button {
+    margin-top: 24px;
+  }
+
+  .contacts {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 47px;
+  }
+
+  .contacts__picture {
+    width: 100%;
+    min-height: 316px;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+    background-image: -webkit-image-set(url("../img/map-mobile@2x.webp") 2x, url("../img/map-mobile.webp") 1x);
+    background-image: image-set("../img/map-mobile@2x.webp" 2x, "../img/map-mobile.webp" 1x);
+  }
+
+  .contacts__description {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+    padding-top: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .main-footer__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: start;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .main-footer__navigation ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: start;
+    margin-left: 0;
+    margin-top: 19px;
+    gap: 8px;
+  }
+
+  .main-footer__navigation a {
+    padding-left: 0;
+  }
+
+  .main-footer__socials {
+    margin-left: 0;
+  }
+
+  .main-footer__socials ul {
+    margin-top: 20px;
   }
 }

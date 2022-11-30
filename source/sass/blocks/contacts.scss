@@ -1,11 +1,111 @@
 .contacts {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
+  gap: 100px;
+  padding-top: 120px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 120px;
+
+  @include vp-1023 {
+    padding-top: 95px;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-bottom: 100px;
+    gap: 30px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 47px;
+  }
+}
+
+.contacts__picture {
+  width: 48%;
+  min-width: 560px;
+  min-height: 306px;
+  background-image: image-set("../img/map-desktop@2x.webp" 2x, "../img/map-desktop.webp" 1x);
+  background-repeat: no-repeat;
+
+  @include vp-1023 {
+    min-width: 324px;
+    min-height: 335px;
+    background-image: image-set("../img/map-tablet@2x.webp" 2x, "../img/map-tablet.webp" 1x);
+  }
+
+  @include vp-767 {
+    width: 100%;
+    min-height: 316px;
+    order: 2;
+    background-image: image-set("../img/map-mobile@2x.webp" 2x, "../img/map-mobile.webp" 1x);
+  }
+}
+
+.contacts-map {
+  width: 100%;
+  height: 100%;
+}
+
+.contacts__description {
+  padding-top: 75px;
+
+  @include vp-1023 {
+    padding-top: 68px;
+  }
+
+  @include vp-767 {
+    order: 1;
+    padding-top: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .contacts__description ul {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.contacts__description li {
+  margin-bottom: 21px;
+}
+
+.contacts__description p {
+  margin: 0;
+  margin-bottom: 32px;
+  padding: 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+
+  @include vp-1023 {
+    margin-bottom: 27px;
+  }
+}
+
+.contacts__description a {
+  display: flex;
+  gap: 10px;
+  line-height: 150%;
+
+  &:hover {
+    color: $color-cerulean;
+  }
+
+  &:focus-visible {
+    outline: 4px solid $color-cerulean;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  @include vp-1023 {
+    gap: 12px;
+  }
 }

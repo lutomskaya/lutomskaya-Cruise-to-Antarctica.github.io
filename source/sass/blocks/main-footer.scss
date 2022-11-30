@@ -5,15 +5,128 @@
 
 .main-footer__wrapper {
   display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 45px;
+
+  @include vp-1023 {
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-top: 50px;
+  } 
+
+  @include vp-767 {
+    flex-direction: column;
+    justify-content: start;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.main-footer__logo {
+  & svg {
+    fill: $color-default-white;
+
+    @include vp-1023 {
+      width: 38px;
+      height: 20px;
+    } 
+  }
+}
+
+.main-footer__navigation ul {
+  margin: 0;
+  margin-top: 8px;
+  margin-left: 30px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+
+  @include vp-1023 {
+    margin-top: 0;
+    margin-left: 15px;
+    gap: 3px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    justify-content: start;
+    margin-left: 0;
+    margin-top: 19px;
+    gap: 8px;
+  }
+}
+
+.main-footer__navigation a {
+  position: relative;
+  padding: 10px;
+  font-weight: 500;
+  line-height: 20px;
+  color: $color-default-white;
+
+  &:hover {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: $color-cerulean;
+    }
+  }
+
+  &:focus-visible {
+    outline: 4px solid $color-cerulean;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  @include vp-1023 {
+    font-size: 12px;
+    line-height: 15px;
+  } 
+
+  @include vp-767 {
+    padding-left: 0;
+  }
 }
 
 .main-footer__socials {
   margin-left: auto;
+
+  @include vp-767 {
+    margin-left: 0;
+  }
 }
 
 .main-footer__socials ul {
   display: flex;
+  flex-wrap: wrap;
+  gap: 26px;
   margin: 0;
+  margin-top: 10px;
   padding: 0;
   list-style: none;
+
+  @include vp-1023 {
+    margin-top: 3px;
+    gap: 15px;
+  } 
+
+  @include vp-767 {
+    margin-top: 20px;
+  }
+}
+
+.main-footer__socials-item a:hover,
+.main-footer__socials-item a:focus-visible { 
+  border: none;
+  outline: 4px solid $color-cerulean;
 }

@@ -1,7 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
-import { clickOnToggle } from './modules/header';
-
+import {clickOnToggle} from './modules/header';
+import {initScroll} from './modules/scroll';
 
 
 // ---------------------------------
@@ -19,6 +19,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   clickOnToggle();
+  initScroll();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана

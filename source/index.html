@@ -14,47 +14,49 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="main-header">
-        <nav class="main-header__nav main-header__nav--closed nojs container">
-          <div class="main-header__logo logo">
-            <a class="logo__link">
-              <svg width="55" height="55" aria-label="Логотип.">
+      <header class="main-header main-header--closed nojs">
+        <div class="main-header__wrapper container">
+          <div class="main-header__logo">
+            <a>
+              <svg width="70" height="38" aria-label="Логотип.">
                 <use xlink:href="./img/sprite_auto.svg#logo"></use>
               </svg>
             </a>
           </div>
-          <ul class="main-header__list navigation">
-            <li>
-              <a href="#">Преимущества</a>
-            </li>
-            <li>
-              <a href="#">Направления</a>
-            </li>
-            <li>
-              <a href="#">Ближайшие круизы</a>
-            </li>
-            <li>
-              <a href="#">Контакты</a>
-            </li>
-          </ul>
-          <button class="main-header__toogle" type="button" data-button>
-            <svg width="24" height="14" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0 1H24M0 7H24M0 13H24" stroke="#F9FBFD" stroke-width="2"/>
-            </svg>
-            <span class="visually-hidden">открыть/закрыть меню</span>
-          </button>
-        </nav>
+          <nav class="main-header__navigation">
+            <ul class="main-header__list">
+              <li>
+                <a href="#">Преимущества</a>
+              </li>
+              <li>
+                <a href="#">Направления</a>
+              </li>
+              <li>
+                <a href="#">Ближайшие круизы</a>
+              </li>
+              <li>
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+            <button class="main-header__toogle" type="button" data-button>
+              <svg width="24" height="12" aria-label="Открыть меню.">
+                <use xlink:href="./img/sprite_auto.svg#menu"></use>
+              </svg>
+              <span class="visually-hidden">открыть/закрыть меню</span>
+            </button>
+          </nav>
+        </div>  
         <div class="main-header__intro container">
-          <h1>Круизы в Антарктику</h1>
-          <p>Волшебный мир айсбергов и пингвинов</p>
+          <h1>Круизы в&nbsp;Антарктику</h1>
+          <p>Волшебный мир айсбергов и&nbsp;пингвинов</p>
         </div>
       </header>
       <main>
         <section class="about container">
           <h2 class="visually-hidden">Информационный блок.</h2>
           <div class="about__description">
-            <h3>Путешествие на край Земли</h3>
-            <p>Это волшебное путешествие поможет вам познакомиться поближе с удивительным миром Антарктики. Наш круизный лайнер отвезет вас на край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и многое другое.</p>
+            <h3>Путешествие на&nbsp;край Земли</h3>
+            <p>Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.</p>
           </div>
           <div class="about__image">
             <picture>
@@ -67,26 +69,26 @@
           <div class="featuries__wrapper container">
             <h2>Преимущества</h2>
             <ul>
-              <li>
-                <svg width="35" height="35" aria-label="Лайнер.">
+              <li class="featuries__item featuries__item--lainer">
+                <svg width="27" height="32" aria-label="Лайнер.">
                   <use xlink:href="/img/sprite_auto.svg#lainer"></use>
                 </svg>
-                <h3>Небольшой круизный лайнер</h3>
-                <p>Круизный лайнер, рассчитанный всего лишь на 300 гостей, поможет избежать шума и очередей и даст возможность насладиться видами и природой.</p>
+                <h3>Небольшой круизный&nbsp;лайнер</h3>
+                <p>Круизный лайнер, рассчитанный всего лишь на 300 гостей, поможет избежать шума&nbsp;и очередей и&nbsp;даст возможность насладиться видами и&nbsp;природой.</p>
               </li>
-              <li>
-                <svg width="35" height="35" aria-label="Все всключено.">
+              <li class="featuries__item featuries__item--all-inclusive">
+                <svg width="38" height="32" aria-label="Все всключено.">
                   <use xlink:href="/img/sprite_auto.svg#all-inclusive"></use>
                 </svg>
-                <h3>Система все включено</h3>
-                <p>Все наши круизы работают по системе “Все Включено”. Великолепные блюда и безлимитный бар доступны для вас 24 часа.</p>
+                <h3>Система все&nbsp;включено</h3>
+                <p>Все наши круизы работают по системе “Все Включено”. Великолепные блюда и&nbsp;безлимитный бар доступны для&nbsp;вас 24&nbsp;часа.</p>
               </li>
-              <li>
-                <svg width="35" height="35" aria-label="Экскурсии.">
+              <li class="featuries__item featuries__item--excursion">
+                <svg width="44" height="32" aria-label="Экскурсии.">
                   <use xlink:href="/img/sprite_auto.svg#excursion"></use>
                 </svg>
                 <h3>Экскурсионные туры на Zodiac</h3>
-                <p>Экскурсионные туры к берегам Антарктиды совершаются на оборудованных лодках типа Zodiack c опытными экскурсоводами.</p>
+                <p>Экскурсионные туры&nbsp;к берегам Антарктиды совершаются на оборудованных лодках&nbsp;типа Zodiack&nbsp;c опытными экскурсоводами.</p>
               </li>
             </ul>
           </div>
@@ -115,7 +117,7 @@
                     <dt>Цена</dt>
                     <dd>от 11500 $</dd>
                   </dl>
-                  <a class="product__button" href="#">Забронировать</a>
+                  <a class="product__button button" href="#">Забронировать</a>
                 </div>
               </li>
               <li class="catalog__item product">
@@ -138,7 +140,7 @@
                     <dt>Цена</dt>
                     <dd>от 14500 $</dd>
                   </dl>
-                  <a class="product__button" href="#">Забронировать</a>
+                  <a class="product__button button" href="#">Забронировать</a>
                 </div>
               </li>
               <li class="catalog__item product">
@@ -161,7 +163,7 @@
                     <dt>Цена</dt>
                     <dd>от 14500 $</dd>
                   </dl>
-                  <a class="product__button" href="#">Забронировать</a>
+                  <a class="product__button button" href="#">Забронировать</a>
                 </div>
               </li>
               <li class="catalog__item product">
@@ -184,7 +186,7 @@
                     <dt>Цена</dt>
                     <dd>от 9700 $</dd>
                   </dl>
-                  <a class="product__button" href="#">Забронировать</a>
+                  <a class="product__button button" href="#">Забронировать</a>
                 </div>
               </li>
               <li class="catalog__item product">
@@ -207,7 +209,7 @@
                     <dt>Цена</dt>
                     <dd>от 18600 $</dd>
                   </dl>
-                  <a class="product__button" href="#">Забронировать</a>
+                  <a class="product__button button" href="#">Забронировать</a>
                 </div>
               </li>
               <li class="catalog__item product">
@@ -230,7 +232,7 @@
                     <dt>Цена</dt>
                     <dd>от 11700 $</dd>
                   </dl>
-                  <a class="product__button" href="#">Забронировать</a>
+                  <a class="product__button button" href="#">Забронировать</a>
                 </div>
               </li>
               <li class="catalog__item product">
@@ -253,13 +255,13 @@
                     <dt>Цена</dt>
                     <dd>от 12500 $</dd>
                   </dl>
-                  <a class="product__button" href="#">Забронировать</a>
+                  <a class="product__button button" href="#">Забронировать</a>
                 </div>
               </li>
               <li class="catalog__item product">
                 <div class="product__inner">
                   <picture>
-                    <source srcset="img/minion.webp 1x, img/miniom@2x.webp 2x" type="image/webp">
+                    <source srcset="img/minion.webp 1x, img/minion@2x.webp 2x" type="image/webp">
                     <img src="img/minion.jpg" srcset="img/minion@2x.jpg 2x" alt="Производство" width="1494" height="818" loading="lazy">
                   </picture>
                   <h3>Круиз “Минион - 1”</h3>
@@ -276,7 +278,7 @@
                     <dt>Цена</dt>
                     <dd>от 12300 $</dd>
                   </dl>
-                  <a class="product__button" href="#">Забронировать</a>
+                  <a class="product__button button" href="#">Забронировать</a>
                 </div>
               </li>
             </ul>
@@ -286,7 +288,7 @@
           <div class="booking__wrapper container">
             <div class="booking__description">
               <h2>Раннее бронирование</h2>
-              <p>Забронируйте тур за 3‑6 месяцев до даты выезда и сэкономьте до 50%</p>
+              <p>Забронируйте тур за&nbsp;3&#xfeff;-&#xfeff;6&nbsp;месяцев до&nbsp;даты&nbsp;выезда и&nbsp;сэкономьте до&nbsp;50%</p>
             </div>
             <div class="booking__form">
               <h3>Оставьте заявку и мы свяжемся с вами в ближайшее время</h3>
@@ -300,7 +302,7 @@
                 <label>
                   <input type="checkbox" required checked>
                   <span class="form__mark"></span>
-                  <span class="form__text">Я согласен на обработку  персональных данных</span>
+                  <span class="form__text">Я согласен на обработку моих персональных данных</span>
                 </label>
                 <button class="form__button button" type="submit">Оставить заявку</button>
               </form>
@@ -311,8 +313,8 @@
           <h2 class="visually-hidden">Контакты.</h2>
           <div class="contacts__map">
             <picture>
-              <source srcset="img/map.webp 1x, img/map@2x.webp 2x" type="image/webp">
-              <img src="img/map.jpg" srcset="img/map@2x.jpg 2x" alt="Производство" width="1494" height="818">
+              <source srcset="img/map.webp" type="image/webp">
+              <img src="img/map.jpg" alt="Производство" width="1494" height="818">
             </picture>
           </div>
           <div class="contacts__description">

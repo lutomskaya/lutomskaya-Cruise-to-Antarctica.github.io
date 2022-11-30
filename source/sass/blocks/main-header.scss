@@ -1,4 +1,5 @@
 .main-header {
+  position: relative;
   background-color: $color-deep-sky-blue;
   background-image: image-set("../img/background/background-header-desktop@2x.webp" 2x, "../img/background/background-header-desktop.webp" 1x);
   background-repeat: no-repeat;
@@ -15,20 +16,66 @@
   }
 }
 
-.main-header__nav {
+.main-header__wrapper {
   display: flex;
   justify-content: space-between;
+  padding-top: 35px;
+  padding-right: 40px;
+  padding-left: 50px;
+
+  @include vp-1023 {
+    padding-top: 29px;
+    padding-right: 35px;
+    padding-left: 45px;
+  } 
+
+  @include vp-767 {
+    padding-top: 22px;
+    padding-right: 20px;
+    padding-left: 17px;
+  } 
+}
+
+.main-header__logo {
+  & svg {
+    fill: $color-default-white;
+
+    @include vp-1023 {
+      width: 38px;
+      height: 20px;
+    } 
+  }
 }
 
 .main-header__toogle {
   display: none;
+  width: 24px;
+  height: 12px;
   cursor: pointer;
+  border: none;
+  background-color: inherit;
 
   @include vp-767 {
     display: block;
-    border: none;
-    background-color: inherit;
-    padding-top: 10px;
+    align-self: flex-end;
+  }
+}
+
+.main-header--opened .main-header__toogle {
+  & svg {
+    display: none;
+  }
+
+  @include vp-767 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url("../img/svg/menu-close.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-right: 10px;
+    margin-top: 25px;
+    z-index: 2;
   }
 }
 
@@ -38,18 +85,74 @@
   }
 }
 
+.main-header--opened .main-header__logo {
+  @include vp-767 {
+    position: absolute;
+    z-index: 13;
+    top: 20px;
+    left: 16%;
+
+    & svg {
+      fill: $color-default-black;
+    }
+  }
+}
+
+.main-header__navigation {
+  padding-top: 8px;
+  max-width: 700px;
+
+  @include vp-1023 {
+    padding-top: 0;
+  } 
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .main-header__list {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+
+  @include vp-1023 {
+    gap: 4px;
+  } 
 }
 
 .main-header__list a {
+  position: relative;
+  padding: 10px;
   font-weight: 500;
   line-height: 20px;
   color: $color-default-white;
 
-  @include vp-1024 {
+  &:hover {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $color-default-white;
+    }
+  }
+
+  &:focus-visible {
+    outline: 4px solid $color-cerulean;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  @include vp-1023 {
     font-size: 14px;
     line-height: 17px; 
   } 
@@ -60,45 +163,82 @@
   }
 }
 
-.main-header__nav--opened .navigation {
+.main-header--opened .main-header__navigation {
   @include vp-767 {
-    display: grid;
-    grid-template-columns: 277px;
-    flex-direction: column;
     position: absolute;
-    top: 67px;
+    top: 0;
     right: 0;
-    overflow: scroll;
-    height: auto;
-    max-height: 490px;
+    width: 89%;
+    height: 101vh;
     background-color: $color-default-white;
   }
 }
 
-.main-header__nav--opened a {
+.main-header--opened .main-header__list {
   @include vp-767 {
-    color: $color-default-black;
+    flex-direction: column;
+    padding-top: 85px;
+    padding-left: 15px;
+    gap: 26px;
+    background-color: $color-default-white;
   }
 }
 
-.main-header__nav--closed .navigation {
+.main-header--opened a {
+  @include vp-767 {
+    color: $color-default-black;
+
+    &:hover {
+      color: $color-cerulean;
+    }
+  
+    &:focus-visible {
+      outline: 4px solid $color-cerulean;
+    }
+  
+    &:active {
+      opacity: 0.5;
+    }
+  }
+}
+
+.main-header--closed .main-header__list {
   @include vp-767 {
     display: none;
   }
 }
 
 .main-header__intro {
+  padding-top: 190px;
+  padding-left: 145px;
+  padding-bottom: 280px;
   color: $color-default-white;
+
+  @include vp-1023 {
+    padding-top: 212px;
+    padding-left: 45px;
+    padding-bottom: 275px;
+  } 
+
+  @include vp-767 {
+    padding-top: 127px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 177px;
+  } 
 }
 
 .main-header__intro h1 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 12px;
   font-weight: 700;
   font-size: 54px;
   line-height: 66px;
 
-  @include vp-1024 {
+  @include vp-1023 {
     font-size: 50px;
-    line-height: 61 px; 
+    line-height: 61px; 
   } 
 
   @include vp-767 { 
@@ -108,15 +248,18 @@
 }
 
 .main-header__intro p {
+  margin: 0;
+  padding: 0;
   font-size: 20px;
   line-height: 24px;
 
-  @include vp-1024 {
+  @include vp-1023 {
     font-size: 18px;
     line-height: 22px; 
   } 
 
   @include vp-767 { 
+    padding-right: 75px;
     font-size: 16px;
     line-height: 140%; 
   }

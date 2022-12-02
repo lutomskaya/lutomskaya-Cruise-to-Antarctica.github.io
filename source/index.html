@@ -97,7 +97,7 @@
           <div class="catalog__wrapper container">
             <h2>Ближайшие круизы</h2>
             <ul>
-              <li class="catalog__item product">
+              <li class="catalog__item product" tabindex="0">
                 <div class="product__inner">
                   <picture>
                     <source srcset="./img/astoria.webp 1x, ./img/astoria@2x.webp 2x" type="image/webp">
@@ -120,7 +120,7 @@
                   <a class="product__button button" href="#">Забронировать</a>
                 </div>
               </li>
-              <li class="catalog__item product">
+              <li class="catalog__item product" tabindex="0">
                 <div class="product__inner">
                   <picture>
                     <source srcset="./img/avrora.webp 1x, ./img/avrora@2x.webp 2x" type="image/webp">
@@ -143,7 +143,7 @@
                   <a class="product__button button" href="#">Забронировать</a>
                 </div>
               </li>
-              <li class="catalog__item product">
+              <li class="catalog__item product" tabindex="0">
                 <div class="product__inner">
                   <picture>
                     <source srcset="./img/atlantis.webp 1x, ./img/atlantis@2x.webp 2x" type="image/webp">
@@ -166,7 +166,7 @@
                   <a class="product__button button" href="#">Забронировать</a>
                 </div>
               </li>
-              <li class="catalog__item product">
+              <li class="catalog__item product" tabindex="0">
                 <div class="product__inner">
                   <picture>
                     <source srcset="./img/odisey.webp 1x, ./img/odisey@2x.webp 2x" type="image/webp">
@@ -189,7 +189,7 @@
                   <a class="product__button button" href="#">Забронировать</a>
                 </div>
               </li>
-              <li class="catalog__item product">
+              <li class="catalog__item product" tabindex="0">
                 <div class="product__inner">
                   <picture>
                     <source srcset="./img/olimpia.webp 1x, ./img/olimpia@2x.webp 2x" type="image/webp">
@@ -212,7 +212,7 @@
                   <a class="product__button button" href="#">Забронировать</a>
                 </div>
               </li>
-              <li class="catalog__item product">
+              <li class="catalog__item product" tabindex="0">
                 <div class="product__inner">
                   <picture>
                     <source srcset="./img/avrora.webp 1x, ./img/avrora@2x.webp 2x" type="image/webp">
@@ -235,7 +235,7 @@
                   <a class="product__button button" href="#">Забронировать</a>
                 </div>
               </li>
-              <li class="catalog__item product">
+              <li class="catalog__item product" tabindex="0">
                 <div class="product__inner">
                   <picture>
                     <source srcset="./img/leonor.webp 1x, ./img/leonor@2x.webp 2x" type="image/webp">
@@ -258,7 +258,7 @@
                   <a class="product__button button" href="#">Забронировать</a>
                 </div>
               </li>
-              <li class="catalog__item product">
+              <li class="catalog__item product" tabindex="0">
                 <div class="product__inner">
                   <picture>
                     <source srcset="./img/minion.webp 1x, ./img/minion@2x.webp 2x" type="image/webp">
@@ -294,11 +294,11 @@
               <h3>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</h3>
               <form class="form" action="https://echo.htmlacademy.ru/" method="post">
                 <label class="visually-hidden" for="name">Имя</label>
-                <input type="text" id="name" placeholder="Имя" required>
+                <input type="text" id="name" name="name" placeholder="Имя" pattern="^[A-Za-zА-Яа-яЁё].*" required data-name-input>
                 <label class="visually-hidden" for="phone">Телефон</label>
-                <input type="tel" id="phone" placeholder="Телефон" required>
+                <input type="tel" id="phone" name="phone" placeholder="Телефон" required data-phone-input>
                 <label class="visually-hidden" for="email">Email</label>
-                <input type="email" id="email" placeholder="Email" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
                 <label class="form__label">
                   <input type="checkbox" required checked>
                   <span class="form__mark"></span>

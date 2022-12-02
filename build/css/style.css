@@ -917,6 +917,10 @@ button,
   color: #f2f5f7;
 }
 
+.product:focus-visible {
+  outline: 4px solid #026593;
+}
+
 .product:hover .product__description {
   display: -webkit-box;
   display: -ms-flexbox;

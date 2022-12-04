@@ -1,3 +1,1 @@
-## Круизы в Антарктику
-
-<a href="https://lutomskaya.github.io/lutomskaya-Cruise-to-Antarctica.github.io/"> </a>
+<a href="https://lutomskaya.github.io/lutomskaya-Cruise-to-Antarctica.github.io/"> ## Круизы в Антарктику </a>

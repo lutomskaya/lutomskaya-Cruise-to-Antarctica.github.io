@@ -12,13 +12,11 @@
   @include vp-767 {
     aspect-ratio: 270/386;
   }
-
-  &:focus-visible {
-    outline: 4px solid $color-cerulean;
-  }
 }
 
-.product:hover .product__description {
+.product:hover .product__description,
+.product:focus-visible .product__description,
+.product:focus-within .product__description {
   display: flex;
   z-index: 2;
   position: absolute;
@@ -71,6 +69,8 @@
   right: 0;
   display: none;
   flex-direction: column;
+  overflow-y: scroll;
+  scrollbar-width: none;
   padding-left: 25px;
   padding-right: 25px;
   padding-top: 30px;
@@ -85,6 +85,10 @@
     padding-left: 25px;
     padding-right: 25px;
   }
+}
+
+.product__description::-webkit-scrollbar {
+  display: none;
 }
 
 .product__description h4 {

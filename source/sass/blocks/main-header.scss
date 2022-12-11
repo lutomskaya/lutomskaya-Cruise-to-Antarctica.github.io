@@ -1,5 +1,6 @@
 .main-header {
   position: relative;
+  z-index: 1;
   background-color: $color-deep-sky-blue;
   background-image: image-set("../img/background/background-header-desktop@2x.webp" 2x, "../img/background/background-header-desktop.webp" 1x);
   background-repeat: no-repeat;
@@ -59,6 +60,25 @@
     display: block;
     align-self: flex-end;
   }
+}
+
+.main-header__overlay {
+  display: none;
+}
+
+.main-header--opened .main-header__overlay {
+  @include vp-767 {
+    display: block;
+    position: fixed;
+    background-color: #002a66;
+    opacity: 0.5;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+  display: none;
 }
 
 .main-header--opened .main-header__toogle {
@@ -170,6 +190,8 @@
     right: 0;
     width: 89%;
     height: 101vh;
+    overflow-y: hidden;
+    z-index: 11;
     background-color: $color-default-white;
   }
 }
@@ -177,7 +199,11 @@
 .main-header--opened .main-header__list {
   @include vp-767 {
     flex-direction: column;
+    position: absolute;
     padding-top: 85px;
+    width: 99%;
+    height: auto;
+    max-height: 100vh;
     padding-left: 15px;
     gap: 26px;
     background-color: $color-default-white;

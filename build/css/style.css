@@ -681,6 +681,7 @@ button,
 
 .main-header {
   position: relative;
+  z-index: 1;
   background-color: #00b2ff;
   background-image: -webkit-image-set(url("../img/background/background-header-desktop@2x.webp") 2x, url("../img/background/background-header-desktop.webp") 1x);
   background-image: image-set("../img/background/background-header-desktop@2x.webp" 2x, "../img/background/background-header-desktop.webp" 1x);
@@ -713,6 +714,14 @@ button,
   cursor: pointer;
   border: none;
   background-color: inherit;
+}
+
+.main-header__overlay {
+  display: none;
+}
+
+.main-header--opened .main-header__overlay {
+  display: none;
 }
 
 .main-header--opened .main-header__toogle svg {
@@ -864,7 +873,7 @@ button,
   padding-left: 30px;
   padding-right: 30px;
   padding-bottom: 45px;
-  background-color: #f2f5f7;
+  background-color: #f9fbfd;
 }
 
 .featuries__item h3 {
@@ -917,11 +926,9 @@ button,
   color: #f2f5f7;
 }
 
-.product:focus-visible {
-  outline: 4px solid #026593;
-}
-
-.product:hover .product__description {
+.product:hover .product__description,
+.product:focus-visible .product__description,
+.product:focus-within .product__description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -970,10 +977,16 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  overflow-y: scroll;
+  scrollbar-width: none;
   padding-left: 25px;
   padding-right: 25px;
   padding-top: 30px;
   background-color: #011c40;
+}
+
+.product__description::-webkit-scrollbar {
+  display: none;
 }
 
 .product__description h4 {
@@ -1056,6 +1069,7 @@ button,
 
 .booking__form {
   width: 39%;
+  min-width: 403px;
   padding-top: 45px;
   padding-right: 50px;
   padding-left: 52px;
@@ -1240,9 +1254,9 @@ input:disabled {
 }
 
 .contacts__description a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   gap: 10px;
   line-height: 150%;
 }
@@ -1293,6 +1307,7 @@ input:disabled {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   gap: 14px;
+  max-width: 930px;
 }
 
 .main-footer__navigation a {
@@ -1336,6 +1351,7 @@ input:disabled {
   margin-top: 10px;
   padding: 0;
   list-style: none;
+  width: 115px;
 }
 
 .main-footer__socials-item a:hover,
@@ -1657,6 +1673,18 @@ input:disabled {
     align-self: flex-end;
   }
 
+  .main-header--opened .main-header__overlay {
+    display: block;
+    position: fixed;
+    background-color: #002a66;
+    opacity: 0.5;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+
   .main-header--opened .main-header__toogle {
     position: absolute;
     top: 0;
@@ -1705,6 +1733,8 @@ input:disabled {
     right: 0;
     width: 89%;
     height: 101vh;
+    overflow-y: hidden;
+    z-index: 11;
     background-color: #ffffff;
   }
 
@@ -1713,7 +1743,11 @@ input:disabled {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    position: absolute;
     padding-top: 85px;
+    width: 99%;
+    height: auto;
+    max-height: 100vh;
     padding-left: 15px;
     gap: 26px;
     background-color: #ffffff;
@@ -1871,6 +1905,7 @@ input:disabled {
     -ms-grid-row-align: center;
     align-self: center;
     width: 100%;
+    min-width: 290px;
     padding-top: 35px;
     padding-left: 30px;
     padding-right: 30px;

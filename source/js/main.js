@@ -1,6 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
-import {clickOnToggle} from './modules/header';
+import {clickLinks, clickOnToggle, clickOverlay} from './modules/header';
 import {initScroll} from './modules/scroll';
 import {checkInputName, checkInputPhone} from './modules/form';
 
@@ -20,6 +20,8 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   clickOnToggle();
+  clickOverlay();
+  clickLinks();
   initScroll();
   checkInputName();
   checkInputPhone();

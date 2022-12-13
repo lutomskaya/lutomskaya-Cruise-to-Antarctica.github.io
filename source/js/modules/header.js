@@ -19,7 +19,7 @@ function closeMenu() {
 function openMenu() {
   mainHeader.classList.remove('main-header--closed');
   mainHeader.classList.add('main-header--opened');
-  scrollLock.disableScrolling('.main-header');
+  scrollLock.disableScrolling('.main-header__wrapper');
 }
 
 function clickOverlay() {
